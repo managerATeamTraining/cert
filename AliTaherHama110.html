@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Certificate Verification</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card-bg: #141b22;
+      --border-color: #2a3644;
+      --text: #f0f4f8;
+      --accent-gold: #d4af37;
+      --success: #22c55e;
+      --subtext: #8b9bb0;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .header-logo {
+      width: 52px;
+      height: 52px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34, 197, 94, 0.1);
+      color: var(--success);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--success);
+    }
+
+    .title-container {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 14px 0;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 0 0 4px 0;
+      color: var(--accent-gold);
+    }
+
+    .subtitle {
+      color: var(--subtext);
+      font-size: 0.85rem;
+      margin: 0;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .info-grid {
+      background: #0d1218;
+      border: 1px solid #1e2936;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #1a232e;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .label {
+      color: var(--subtext);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .value {
+      font-weight: 600;
+      text-align: right;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <!-- Fixed Crescent and Star SVG -->
+      <svg class="header-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fde047" />
+            <stop offset="50%" stop-color="#eab308" />
+            <stop offset="100%" stop-color="#a16207" />
+          </linearGradient>
+        </defs>
+        <!-- Crescent Body -->
+        <path d="M 50 5 A 45 45 0 1 0 95 50 A 35 35 0 1 1 50 5 Z" fill="url(#goldGrad)" />
+        <!-- Star Positioned inside Crescent -->
+        <polygon points="56,36 60,46 71,46 62,53 65,63 56,57 47,63 50,53 41,46 52,46" fill="url(#goldGrad)" />
+      </svg>
+      
+      <div class="status-badge">
+        <span class="pulse"></span> 100% VERIFIED AUTHENTIC
+      </div>
+    </div>
+
+    <div class="title-container">
+      <h1>CERTIFICATE OF COMPLETION</h1>
+      <p class="subtitle">Special Training Center «A-T.E.A.M.»</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-row">
+        <span class="label">Recipient</span>
+        <span class="value" id="recipient-name">Ahmed Karran</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Course</span>
+        <span class="value" id="award-title">HI CQB/Tactical Assault Team</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Status</span>
+        <span class="value" style="color: #22c55e;">Active & Valid</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
